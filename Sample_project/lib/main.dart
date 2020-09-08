@@ -5,37 +5,26 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  void buttonPress() {
-    print('true');
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text("MANAGER"),
+          title: Text(
+            "Manager",
+            style: TextStyle(
+              color: Colors.tealAccent[400],
+            ),
+          ),
+          centerTitle: true,
+          leading: Icon(
+            Icons.settings,
+            color: Colors.tealAccent[400],
+            size: 20,
+          ),
+          backgroundColor: Colors.grey[900],
         ),
-        body: Column(
-          children: [
-            RaisedButton(
-              child: Text("Sports Equipment"),
-              onPressed: buttonPress,
-            ),
-            RaisedButton(
-              child: Text("Sports Equipment"),
-              onPressed: buttonPress,
-            ),
-            RaisedButton(
-              child: Text("Sports Equipment"),
-              onPressed: buttonPress,
-            ),
-            RaisedButton(
-              child: Text("Sports Equipment"),
-              onPressed: buttonPress,
-            ),
-          ],
-        ),
+        backgroundColor: Colors.grey[850],
       ),
     );
   }
