@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:Sample_project/widgets/bottomnavigation.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,61 +21,22 @@ class _MyAppState extends State<MyApp> {
           title: Text(
             "Manager",
             style: TextStyle(
-              color: Colors.tealAccent,
+              color: Colors.limeAccent[100],
+              fontFamily: 'Quicksand',
+              fontWeight: FontWeight.w600,
             ),
           ),
           centerTitle: true,
           leading: Icon(
             Icons.settings,
-            color: Colors.tealAccent[400],
+            color: Colors.limeAccent[100],
             size: 20,
           ),
-          backgroundColor: Colors.grey[900],
+          backgroundColor: Colors.black,
         ),
-        backgroundColor: Colors.grey[800],
+        backgroundColor: Colors.grey[900],
         body: Container(),
-        bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _currentIndex,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.scanner,
-                color: Colors.tealAccent,
-              ),
-              title: Text("Scan"),
-              backgroundColor: Colors.grey[900],
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.library_books,
-                color: Colors.tealAccent,
-              ),
-              title: Text("Common"),
-              backgroundColor: Colors.grey[900],
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.supervisor_account,
-                color: Colors.tealAccent,
-              ),
-              title: Text("Personal"),
-              backgroundColor: Colors.grey[900],
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.account_box,
-                color: Colors.tealAccent,
-              ),
-              title: Text("Account"),
-              backgroundColor: Colors.grey[900],
-            ),
-          ],
-          onTap: (index) {
-            setState(() {
-              _currentIndex = index;
-            });
-          },
-        ),
+        bottomNavigationBar: MyNavigationBar(),
       ),
     );
   }
