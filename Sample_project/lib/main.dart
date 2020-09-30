@@ -21,7 +21,7 @@ class _MyAppState extends State<MyApp> {
           title: Text(
             "Manager",
             style: TextStyle(
-              color: Colors.limeAccent[100],
+              color: Colors.white,
               fontFamily: 'Quicksand',
               fontWeight: FontWeight.w600,
             ),
@@ -29,12 +29,12 @@ class _MyAppState extends State<MyApp> {
           centerTitle: true,
           leading: Icon(
             Icons.settings,
-            color: Colors.limeAccent[100],
+            color: Colors.white,
             size: 20,
           ),
           backgroundColor: Colors.black,
         ),
-        backgroundColor: Colors.grey[900],
+        backgroundColor: Colors.black,
         body: Container(),
         bottomNavigationBar: MyNavigationBar(),
       ),
